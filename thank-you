@@ -3,46 +3,192 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Request Received — VisaliaContractor.com</title>
+  <title>VisaliaContractor.com — Find Trusted Local Pros Fast</title>
+  <meta name="description" content="Compare quotes from licensed, insured contractors in Visalia. Fast estimates. Zero pressure." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=Playfair+Display:wght@500&display=swap" rel="stylesheet">
+
   <style>
-    :root{--green:#10b981;--bg:#f8fafc;--text:#0f172a;--muted:#4b5563;--card:#ffffff;--border:#e5e7eb}
-    body{margin:0;font-family:Inter,system-ui;background:linear-gradient(180deg,#f9fafb 0%,#edf2f7 100%);color:var(--text)}
-    .wrap{max-width:760px;margin:60px auto;padding:0 22px;text-align:center}
-    .card{background:var(--card);border:1px solid var(--border);border-radius:18px;padding:26px;box-shadow:0 24px 60px rgba(15,23,42,.06)}
-    h1{font-size:32px;margin:0 0 6px}
-    .lead{color:var(--muted);margin:0 0 18px}
-    .steps{list-style:none;padding:0;margin:0 0 18px;text-align:left}
-    .steps li{background:#fff;border:1px solid var(--border);border-radius:12px;padding:10px 12px;margin-bottom:8px;font-size:14px}
-    .badge{display:inline-block;background:#ecfdf5;color:#065f46;border-radius:999px;padding:4px 10px;font-size:12px;font-weight:600;margin-bottom:10px}
-    a.btn{display:inline-block;margin-top:14px;padding:10px 14px;border-radius:10px;background:var(--green);color:#fff;text-decoration:none;font-weight:600}
-    .support{margin-top:16px;color:var(--muted);font-size:13px}
+    :root{--navy:#0f172a;--ink:#111827;--gold:#fbbf24;--emerald:#10b981;--mist:#f3f4f6;--card:#ffffff;--muted:#6b7280;--border:#e5e7eb;--shadow:0 28px 60px rgba(15,23,42,.08)}
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Inter,system-ui;background:#f8fafc;color:var(--ink)}
+    a{text-decoration:none;color:inherit}
+
+    /* NAV */
+    .nav{display:flex;justify-content:space-between;align-items:center;max-width:1280px;margin:0 auto;padding:14px 22px}
+    .logo{font-family:'Playfair Display',serif;font-size:22px;font-weight:700}
+    .logo span{color:var(--gold)}
+    .nav a.cta{padding:10px 14px;border-radius:12px;background:var(--gold);color:#111;font-weight:700}
+
+    /* HERO */
+    header{background:linear-gradient(140deg,#0f172a 0%,#1f2937 60%,#0f172a 100%);color:#fff;padding:90px 18px 120px;margin-bottom:-60px}
+    .container{max-width:1280px;margin:0 auto;padding:0 22px}
+    .eyebrow{font-size:13px;text-transform:uppercase;letter-spacing:.08em;color:#d1d5db}
+    h1{font-size:46px;margin:14px 0 6px;line-height:1.05;font-weight:800}
+    .hero-sub{max-width:780px;color:#e5e7eb;font-size:18px}
+    .hero-cta{margin-top:24px;display:flex;gap:10px;flex-wrap:wrap}
+    .btn{border:0;border-radius:12px;padding:14px 16px;font-weight:700;font-size:14px;cursor:pointer}
+    .btn-primary{background:var(--gold);color:#111}
+    .btn-outline{background:transparent;border:1px solid rgba(255,255,255,.4);color:#fff}
+
+    /* TRUST STRIP */
+    .trust-strip{background:#fff;border-radius:18px;box-shadow:var(--shadow);padding:14px;margin-top:30px;display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:10px}
+    .trust-strip div{font-size:13px;color:#374151;display:flex;gap:6px;align-items:center}
+
+    /* SERVICES */
+    main{padding-top:70px}
+    section{margin:80px 0}
+    h2{font-size:28px;font-weight:800;margin:0 0 14px}
+    .grid{display:grid;gap:20px}
+    .services{grid-template-columns:repeat(auto-fill,minmax(240px,1fr))}
+    .card{background:var(--card);border:1px solid var(--border);border-radius:22px;box-shadow:var(--shadow);padding:20px;transition:.2s}
+    .card:hover{transform:translateY(-2px)}
+    .card h3{margin:4px 0 4px;font-size:18px}
+    .card p{margin:0;color:var(--muted);font-size:14px}
+
+    /* PROCESS */
+    .steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px}
+    .step{background:#fff;border:1px solid var(--border);border-radius:18px;padding:16px;box-shadow:var(--shadow)}
+    .step strong{font-size:30px;color:var(--emerald);display:block;margin-bottom:4px}
+
+    /* FORM */
+    .form-wrap{background:#fff;border:1px solid var(--border);border-radius:26px;box-shadow:var(--shadow);padding:28px}
+    form{display:grid;gap:10px;margin-top:6px}
+    input,select,textarea{padding:14px;border-radius:14px;border:1px solid var(--border);font-size:15px}
+    .submit{background:var(--gold);color:#111;border:0;padding:14px;border-radius:14px;font-weight:700;font-size:15px;cursor:pointer}
+
+    /* TESTIMONIALS */
+    .testimonials{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:14px}
+    .quote{background:#fff;border:1px solid var(--border);border-radius:18px;padding:16px;box-shadow:var(--shadow);font-size:14px}
+
+    /* FOOTER */
+    footer{margin:70px 0 90px;text-align:center;color:var(--muted);font-size:14px}
   </style>
+
+  <!-- TRACKING PLACEHOLDERS (IDs replaced earlier) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=MEASUREMENT_ID"></script>
+  <script>
+    window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','MEASUREMENT_ID');
+  </script>
+  <script>
+    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod? n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init','PIXEL_ID');
+    fbq('track','PageView');
+  </script>
 </head>
 <body>
-  <div class="wrap">
-    <div class="card">
-      <span class="badge">Request submitted</span>
-      <h1>Thanks — we’ve got it!</h1>
-      <p class="lead">We’re reviewing your project and matching you with the best verified local pros.
-        Expect a call or message soon.</p>
+  <nav class="nav">
+    <div class="logo">VisaliaContractor<span>.com</span></div>
+    <a class="cta" href="#estimate">Get Free Estimate</a>
+  </nav>
 
-      <h3 style="margin:10px 0 8px">What happens next</h3>
-      <ul class="steps">
-        <li><strong>1.</strong> A coordinator confirms a few details (no sales pressure).</li>
-        <li><strong>2.</strong> We connect you with up to 3 vetted contractors.</li>
-        <li><strong>3.</strong> You compare quotes and choose when you’re ready.</li>
-      </ul>
+  <header>
+    <div class="container">
+      <div class="eyebrow">Local Pros • Fast Quotes • No Guesswork</div>
+      <h1>Hire Trusted Contractors in Visalia — Without The Stress</h1>
+      <p class="hero-sub">Tell us about your project. We match you with vetted, licensed pros — you compare fair quotes and choose when you’re ready. No spam. No pushy sales.</p>
 
-      <h3 style="margin:10px 0 8px">Pro tips to speed things up</h3>
-      <ul class="steps">
-        <li>Keep your phone handy — contractors may call quickly.</li>
-        <li>Photos of the job help them give better pricing.</li>
-        <li>Have a budget range in mind (totally optional).</li>
-      </ul>
+      <div class="hero-cta">
+        <button class="btn btn-primary" onclick="document.getElementById('estimate').scrollIntoView({behavior:'smooth'})">Start My Project</button>
+        <button class="btn btn-outline" onclick="document.getElementById('services').scrollIntoView({behavior:'smooth'})">Browse Services</button>
+      </div>
 
-      <a class="btn" href="/">Back to Home</a>
-      <div class="support">Questions? Reply to the confirmation email — we’re here to help.</div>
+      <div class="trust-strip">
+        <div>✓ Licensed & Insured</div>
+        <div>✓ Transparent Quotes</div>
+        <div>✓ Local Pros Only</div>
+        <div>✓ Support If Anything Feels Off</div>
+      </div>
     </div>
-  </div>
+  </header>
+
+  <main class="container">
+    <section id="services">
+      <h2>Popular Services</h2>
+      <div class="grid services">
+        <div class="card"><h3>Plumbing</h3><p>Leaks, drains, repipes, water heaters.</p></div>
+        <div class="card"><h3>Electrical</h3><p>Panels, outlets, EV chargers.</p></div>
+        <div class="card"><h3>Roofing</h3><p>Repairs, replacement, inspections.</p></div>
+        <div class="card"><h3>HVAC</h3><p>AC, furnaces, ducting.</p></div>
+        <div class="card"><h3>Landscaping</h3><p>Irrigation, design, cleanup.</p></div>
+        <div class="card"><h3>Concrete</h3><p>Driveways, patios, flatwork.</p></div>
+        <div class="card"><h3>Painting</h3><p>Interior / exterior.</p></div>
+        <div class="card"><h3>Handyman</h3><p>Repairs & installs.</p></div>
+        <div class="card"><h3>Emergency</h3><p>24/7 response options.</p></div>
+      </div>
+    </section>
+
+    <section>
+      <h2>How It Works</h2>
+      <div class="steps">
+        <div class="step"><strong>1</strong>Tell us about the project (2 minutes).</div>
+        <div class="step"><strong>2</strong>We match you with up to 3 vetted pros.</div>
+        <div class="step"><strong>3</strong>You compare quotes and choose.</div>
+      </div>
+    </section>
+
+    <section id="estimate">
+      <div class="form-wrap">
+        <h2>Get Your Free Estimate</h2>
+        <p style="color:var(--muted);margin:0 0 12px">Faster responses when you include a phone number. Takes ~60 seconds.</p>
+        <form id="leadForm" action="https://formspree.io/f/xojvpqkb" method="post">
+          <select name="project_type" required><option value="">Project Type</option><option>Plumbing</option><option>Electrical</option><option>Roofing</option><option>HVAC</option><option>Other</option></select>
+          <textarea rows="4" name="description" placeholder="Describe your project" required></textarea>
+          <input name="name" placeholder="Name" required />
+          <input name="phone" placeholder="Phone" required />
+          <input name="email" placeholder="Email (optional)" />
+          <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true" />
+          <button class="submit" type="submit">Submit — Match Me</button>
+        </form>
+        <div id="thankMessage" style="display:none;margin-top:14px;padding:14px;border-radius:14px;background:#ecfdf5;color:#065f46;font-size:14px">
+          Thank you — your request has been received. We’re matching you with the best local pros now.
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Real Homeowners — Real Results</h2>
+      <div class="testimonials">
+        <div class="quote">“Got three quotes in a day and saved $900 on my AC repair. Smooth process and no spam.” — Maria R.</div>
+        <div class="quote">“Finally found a roofer who showed up on time. The vetting helped a ton.” — James T.</div>
+        <div class="quote">“Love that I didn’t have to call around. One form, done.” — Kelsey P.</div>
+      </div>
+    </section>
+
+    <footer>
+      Serving Visalia, Tulare, Exeter, Farmersville, Dinuba, Hanford, Porterville • © VisaliaContractor.com
+    </footer>
+  </main>
+
+  <script>
+    // sticky mobile CTA
+    const bar=document.createElement('div');
+    bar.innerHTML='<button style="width:100%;padding:14px 0;border:0;border-radius:0;background:var(--gold);color:#111;font-weight:700">Start Free Estimate</button>';
+    bar.style.cssText='position:fixed;bottom:0;left:0;right:0;z-index:50;box-shadow:0 -8px 24px rgba(0,0,0,.08);display:none';
+    document.body.appendChild(bar);
+    bar.onclick=()=>document.getElementById('estimate').scrollIntoView({behavior:"smooth"});
+    const observer=new IntersectionObserver(([e])=>{bar.style.display=e.isIntersecting?'none':'block'});observer.observe(document.getElementById('estimate'));
+
+    // AJAX submit + conversion events
+    const form=document.getElementById('leadForm');
+    if(form){
+      form.addEventListener('submit',async(e)=>{
+        e.preventDefault();
+        const btn=form.querySelector('button[type="submit"]');
+        btn.disabled=true;btn.textContent='Submitting…';
+        try{
+          const res=await fetch(form.action,{method:'POST',body:new FormData(form),headers:{'Accept':'application/json'}});
+          if(res.ok){
+            try{fbq('track','Lead');}catch(e){}
+            try{gtag('event','generate_lead');}catch(e){}
+            form.style.display='none';
+            document.getElementById('thankMessage').style.display='block';
+          }else{btn.disabled=false;btn.textContent='Submit — Match Me';}
+        }catch(err){btn.disabled=false;btn.textContent='Submit — Match Me';}
+      });
+    }
+  </script>
 </body>
 </html>
