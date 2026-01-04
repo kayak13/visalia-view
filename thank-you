@@ -3,20 +3,46 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Thank You — VisaliaContractor.com</title>
+  <title>Request Received — VisaliaContractor.com</title>
   <style>
-    body{margin:0;font-family:Inter,system-ui;background:#f8fafc;color:#0f172a}
-    .wrap{max-width:720px;margin:60px auto;padding:0 22px;text-align:center}
-    h1{font-size:30px;margin-bottom:8px}
-    p{color:#4b5563}
-    a{display:inline-block;margin-top:16px;padding:10px 14px;border-radius:10px;background:#10b981;color:#fff;text-decoration:none;font-weight:600}
+    :root{--green:#10b981;--bg:#f8fafc;--text:#0f172a;--muted:#4b5563;--card:#ffffff;--border:#e5e7eb}
+    body{margin:0;font-family:Inter,system-ui;background:linear-gradient(180deg,#f9fafb 0%,#edf2f7 100%);color:var(--text)}
+    .wrap{max-width:760px;margin:60px auto;padding:0 22px;text-align:center}
+    .card{background:var(--card);border:1px solid var(--border);border-radius:18px;padding:26px;box-shadow:0 24px 60px rgba(15,23,42,.06)}
+    h1{font-size:32px;margin:0 0 6px}
+    .lead{color:var(--muted);margin:0 0 18px}
+    .steps{list-style:none;padding:0;margin:0 0 18px;text-align:left}
+    .steps li{background:#fff;border:1px solid var(--border);border-radius:12px;padding:10px 12px;margin-bottom:8px;font-size:14px}
+    .badge{display:inline-block;background:#ecfdf5;color:#065f46;border-radius:999px;padding:4px 10px;font-size:12px;font-weight:600;margin-bottom:10px}
+    a.btn{display:inline-block;margin-top:14px;padding:10px 14px;border-radius:10px;background:var(--green);color:#fff;text-decoration:none;font-weight:600}
+    .support{margin-top:16px;color:var(--muted);font-size:13px}
   </style>
 </head>
 <body>
   <div class="wrap">
-    <h1>Thanks — we’ve got your request!</h1>
-    <p>We’re reviewing the details and matching you with the best local contractors. You’ll hear from us shortly.</p>
-    <a href="/">Back to Home</a>
+    <div class="card">
+      <span class="badge">Request submitted</span>
+      <h1>Thanks — we’ve got it!</h1>
+      <p class="lead">We’re reviewing your project and matching you with the best verified local pros.
+        Expect a call or message soon.</p>
+
+      <h3 style="margin:10px 0 8px">What happens next</h3>
+      <ul class="steps">
+        <li><strong>1.</strong> A coordinator confirms a few details (no sales pressure).</li>
+        <li><strong>2.</strong> We connect you with up to 3 vetted contractors.</li>
+        <li><strong>3.</strong> You compare quotes and choose when you’re ready.</li>
+      </ul>
+
+      <h3 style="margin:10px 0 8px">Pro tips to speed things up</h3>
+      <ul class="steps">
+        <li>Keep your phone handy — contractors may call quickly.</li>
+        <li>Photos of the job help them give better pricing.</li>
+        <li>Have a budget range in mind (totally optional).</li>
+      </ul>
+
+      <a class="btn" href="/">Back to Home</a>
+      <div class="support">Questions? Reply to the confirmation email — we’re here to help.</div>
+    </div>
   </div>
 </body>
 </html>
