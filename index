@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>VisaliaContractor.com — Book Trusted Local Pros</title>
+  <meta name="description" content="Compare quotes from vetted contractors in Visalia. Licensed, insured, and reviewed.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=Playfair+Display:wght@500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary:#0f172a; /* deep navy */
+      --accent:#f59e0b;  /* gold */
+      --accent2:#10b981; /* emerald */
+      --bg:#f8fafc; 
+      --card:#ffffff; 
+      --text:#0f172a; 
+      --muted:#6b7280; 
+      --border:#e5e7eb;
+      --shadow:0 24px 60px rgba(15,23,42,.06);
+    }
+    *,*:before,*:after{box-sizing:border-box}
+    body{margin:0;font-family:Inter,system-ui;background:var(--bg);color:var(--text)}
+    a{text-decoration:none;color:inherit}
+
+    /* --- HERO --- */
+    header{
+      background:linear-gradient(140deg,#0f172a 0%,#1f2937 55%,#111827 100%);
+      color:#fff;
+      padding:90px 18px 110px;
+    }
+    .logo{font-family:'Playfair Display',serif;font-size:22px;font-weight:600;letter-spacing:.4px}
+    .logo span{color:var(--accent)}
+    .container{max-width:1280px;margin:0 auto;padding:0 28px}
+    .hero-eyebrow{font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:#d1d5db}
+    h1{margin:16px 0 10px;font-size:48px;line-height:1.05;font-weight:800}
+    .hero-sub{color:#e5e7eb;max-width:820px;font-size:18px;line-height:1.55}
+    .hero-cta{margin-top:24px;display:flex;gap:10px;flex-wrap:wrap}
+    .btn{border-radius:12px;border:0;padding:14px 16px;font-weight:700;font-size:14px;cursor:pointer}
+    .btn-primary{background:var(--accent);color:#111}
+    .btn-outline{background:transparent;color:#fff;border:1px solid rgba(255,255,255,.25)}
+
+    /* --- SERVICE GRID --- */
+    section{margin:70px 0}
+    h2{font-size:26px;margin:0 0 14px;font-weight:800}
+    .pill{display:inline-block;background:#fff;border:1px solid var(--border);padding:4px 10px;border-radius:999px;color:var(--muted);font-size:12px;margin-bottom:2px}
+    .grid{display:grid;gap:18px}
+    .services{grid-template-columns:repeat(auto-fill,minmax(260px,1fr));}
+    .card{background:var(--card);border:1px solid var(--border);padding:22px;border-radius:20px;box-shadow:var(--shadow);transition:.2s transform, .2s box-shadow}
+    .card:hover{transform:translateY(-2px)}
+    .card h3{margin:6px 0 6px;font-size:18px}
+    .card p{color:var(--muted);font-size:14px;margin:0}
+
+    /* --- PROCESS --- */
+    .steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px}
+    .step{background:#fff;border:1px solid var(--border);padding:16px;border-radius:18px;box-shadow:var(--shadow)}
+    .step strong{display:block;font-size:28px;color:var(--accent2)}
+
+    /* --- FORM --- */
+    .form-wrap{background:#fff;border:1px solid var(--border);border-radius:26px;box-shadow:var(--shadow);padding:30px}
+    form{display:grid;gap:10px;margin-top:4px}
+    input,select,textarea{padding:14px 14px;border-radius:14px;border:1px solid var(--border);font-size:15px}
+    .submit{background:var(--accent2);color:#fff;padding:14px;border-radius:12px;border:0;font-weight:700;font-size:14px;cursor:pointer}
+
+    /* --- FEATURED CONTRACTOR --- */
+    .contractor{
+      border:1px solid var(--border);border-radius:22px;padding:18px;background:#fff;box-shadow:var(--shadow);
+      display:grid;gap:4px
+    }
+    .contractor h3{margin:0;font-size:18px}
+    .contractor ul{margin:0 0 8px 18px;color:var(--muted);font-size:14px}
+
+    /* --- TRUST + FOOTER --- */
+    .trust{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
+    .trust-card{background:#fff;border:1px solid var(--border);border-radius:18px;padding:14px;box-shadow:var(--shadow);font-size:14px}
+    footer{margin:60px 0 80px;color:var(--muted);font-size:14px;text-align:center}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <div class="logo">VisaliaContractor<span>.com</span></div>
+      <div class="hero-eyebrow">Local Pros • Fast Quotes • Zero Guesswork</div>
+      <h1>Hire Trusted Contractors in Visalia — Without the Headache</h1>
+      <p class="hero-sub">Tell us what you need. We connect you with vetted, licensed professionals — and you compare fair quotes. No spam. No pressure. Just quality work delivered.</p>
+      <div class="hero-cta">
+        <button class="btn btn-primary" onclick="document.getElementById('lead-form').scrollIntoView({behavior:'smooth'})">Start My Project</button>
+        <button class="btn btn-outline" onclick="document.getElementById('lead-form').scrollIntoView({behavior:'smooth'})">Browse Services</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section>
+      <span class="pill">Popular trades</span>
+      <h2>What do you need help with?</h2>
+      <div class="grid services">
+        <div class="card"><h3>Plumbing</h3><p>Leaks, clogs, repipes, water heaters.</p></div>
+        <div class="card"><h3>Electrical</h3><p>Panels, outlets, lighting, EV chargers.</p></div>
+        <div class="card"><h3>Roofing</h3><p>Repairs, replacement, inspections.</p></div>
+        <div class="card"><h3>HVAC</h3><p>AC, furnaces, maintenance.</p></div>
+        <div class="card"><h3>Landscaping</h3><p>Design, irrigation, clean‑ups.</p></div>
+        <div class="card"><h3>Concrete</h3><p>Driveways, patios, flatwork.</p></div>
+        <div class="card"><h3>Painting</h3><p>Interior / exterior finishing.</p></div>
+        <div class="card"><h3>Flooring</h3><p>Tile, vinyl, hardwood.</p></div>
+        <div class="card"><h3>Fencing</h3><p>Wood, vinyl, gates.</p></div>
+        <div class="card"><h3>Handyman</h3><p>Repairs, installs, punch lists.</p></div>
+        <div class="card"><h3>Emergency</h3><p>24/7 response options.</p></div>
+      </div>
+    </section>
+
+    <section>
+      <span class="pill">How it works</span>
+      <h2>Simple. Transparent. Built around you.</h2>
+      <div class="steps">
+        <div class="step"><strong>1</strong>Tell us about your project (2 minutes).</div>
+        <div class="step"><strong>2</strong>We match you with up to 3 vetted pros.</div>
+        <div class="step"><strong>3</strong>You compare quotes — choose when ready.</div>
+      </div>
+    </section>
+
+    <section>
+      <div class="form-wrap" id="lead-form">
+        <h2>Get your free estimate</h2>
+        <p style="color:var(--muted);font-size:14px;margin:0 0 10px">Faster responses when you include a phone number. Takes ~60 seconds.</p>
+        <!-- Replace the FORM ACTION below with your Google Forms or Formspree endpoint -->
+        <form action="https://formspree.io/f/xojvpqkb" method="post">
+          <select name="project_type" required><option value="">Project Type</option><option>Plumbing</option><option>Electrical</option><option>Roofing</option><option>HVAC</option><option>Other</option></select>
+          <textarea rows="4" name="description" placeholder="Describe your project" required></textarea>
+          <input name="name" placeholder="Name" required />
+          <input name="phone" placeholder="Phone" required />
+          <input name="email" placeholder="Email (optional)" />
+          <!-- Optional redirect after submit -->
+          <input type="hidden" name="redirect" value="/thank-you.html" />
+          <button class="submit" type="submit">Submit — Match Me</button>
+        </form>
+        <ul style="margin:10px 0 0 18px;color:var(--muted);font-size:13px">
+          <li>No obligation. You choose if and when to hire.</li>
+          <li>We route to vetted local pros only.</li>
+          <li>Your info is never sold — ever.</li>
+        </ul>
+      </div>
+    </section>
+
+    
+
+    <section>
+      <span class="pill">Why choose us</span>
+      <h2>You get quality control — without doing the homework</h2>
+      <div class="trust">
+        <div class="trust-card"><strong>Licensed & insured</strong><br/>We verify credentials on every partner where applicable.</div>
+        <div class="trust-card"><strong>Transparent quotes</strong><br/>Apples‑to‑apples comparisons — no mystery charges.</div>
+        <div class="trust-card"><strong>Local pros only</strong><br/>Real Valley contractors, not national call centers.</div>
+        <div class="trust-card"><strong>Support that cares</strong><br/>If something feels off, we step in and fix it fast.</div>
+      </div>
+    </section>
+
+    <section>
+      <span class="pill">Contractors</span>
+      <h2>Grow your pipeline with quality local leads</h2>
+      <p>Join our preferred network — or get your own SEO‑optimized page on VisaliaContractor.com.</p>
+      <button class="btn btn-outline" style="color:var(--text);border-color:var(--border)">Apply as a Contractor</button>
+    </section>
+
+    <footer>
+      Serving Visalia, Tulare, Exeter, Farmersville, Dinuba, Hanford, Porterville • © VisaliaContractor.com
+    </footer>
+  </main>
+<script>
+  // Sticky call to action to maximize conversions on mobile
+  const ctaBar=document.createElement('div');
+  ctaBar.innerHTML='<button style="width:100%;padding:14px 0;border:0;border-radius:0;background:#0d9488;color:#fff;font-weight:700">Start Free Estimate</button>';
+  ctaBar.style.cssText='position:fixed;bottom:0;left:0;right:0;z-index:50;box-shadow:0 -8px 24px rgba(0,0,0,.08);display:none';
+  document.body.appendChild(ctaBar);
+  ctaBar.onclick=()=>document.getElementById('lead-form').scrollIntoView({behavior:"smooth"});
+  const observer=new IntersectionObserver(([e])=>{ctaBar.style.display=e.isIntersecting?'none':'block'},{threshold:0});
+  observer.observe(document.getElementById('lead-form'));
+</script>
+</body>
+</html>
