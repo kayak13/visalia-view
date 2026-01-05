@@ -187,7 +187,7 @@
           <textarea rows="4" name="description" placeholder="Describe your project" required></textarea>
           <input name="name" placeholder="Name" required />
           <input name="phone" placeholder="Phone" required />
-          <input name="email" placeholder="Email (optional)" />
+          <input name="_replyto" type="email" placeholder="Email (optional)" />
           <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true" />
           <button class="submit" type="submit">Submit — Match Me</button>
         </form>
@@ -267,7 +267,7 @@
         </select>
         <input name="contact_name" placeholder="Your Name" required />
         <input name="contact_phone" placeholder="Phone" required />
-        <input name="contact_email" placeholder="Email" />
+        <input name="_replyto" placeholder="Email" type="email" required />
         <textarea rows="3" name="notes" placeholder="Anything we should know?"></textarea>
         <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" />
         <button class="submit" type="submit">Submit Application</button>
@@ -300,6 +300,7 @@
           <textarea rows="4" name="details" placeholder="Tell us what happened" required></textarea>
           <input name="your_name" placeholder="Your Name" required />
           <input name="your_phone" placeholder="Your Phone" required />
+          <input name="_replyto" type="email" placeholder="Your Email (optional)" />
           <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" />
           <button class="submit" type="submit">Submit Report</button>
         </form>
